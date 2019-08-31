@@ -12,6 +12,8 @@
 		A66A11E1231A8A8600F93A3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66A11DF231A8A8600F93A3D /* Main.storyboard */; };
 		A66A11E3231A8A8900F93A3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A66A11E2231A8A8900F93A3D /* Assets.xcassets */; };
 		A66A11E6231A8A8900F93A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A66A11E4231A8A8900F93A3D /* LaunchScreen.storyboard */; };
+		A66A11EE231A999300F93A3D /* XMLParserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66A11ED231A999300F93A3D /* XMLParserController.swift */; };
+		A66A11F0231A9AA500F93A3D /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = A66A11EF231A9AA500F93A3D /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		A66A11E2231A8A8900F93A3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A66A11E5231A8A8900F93A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A66A11E7231A8A8900F93A3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A66A11ED231A999300F93A3D /* XMLParserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserController.swift; sourceTree = "<group>"; };
+		A66A11EF231A9AA500F93A3D /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				A66A11DB231A8A8600F93A3D /* AppDelegate.swift */,
 				A66A11DD231A8A8600F93A3D /* ViewController.swift */,
+				A66A11ED231A999300F93A3D /* XMLParserController.swift */,
+				A66A11EF231A9AA500F93A3D /* Post.swift */,
 				A66A11DF231A8A8600F93A3D /* Main.storyboard */,
 				A66A11E2231A8A8900F93A3D /* Assets.xcassets */,
 				A66A11E4231A8A8900F93A3D /* LaunchScreen.storyboard */,
@@ -136,7 +142,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A66A11DE231A8A8600F93A3D /* ViewController.swift in Sources */,
+				A66A11EE231A999300F93A3D /* XMLParserController.swift in Sources */,
 				A66A11DC231A8A8600F93A3D /* AppDelegate.swift in Sources */,
+				A66A11F0231A9AA500F93A3D /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,14 +293,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MT5WYJBJ2;
 				INFOPLIST_FILE = "Epics departement reader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.karimgouda.Epics-departement-reader";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karimgouda.departement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -303,14 +312,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MT5WYJBJ2;
 				INFOPLIST_FILE = "Epics departement reader/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.karimgouda.Epics-departement-reader";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karimgouda.departement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

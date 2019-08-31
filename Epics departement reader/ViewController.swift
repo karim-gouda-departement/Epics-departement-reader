@@ -1,20 +1,37 @@
-//
-//  ViewController.swift
-//  Epics departement reader
-//
-//  Created by Karim Gouda Said Hessan on 31/08/2019.
-//  Copyright © 2019 Karim Gouda Said Hessan. All rights reserved.
-//
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return parserController.posts.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        let currentPost = self.parserController.posts[indexPath.row]
+        
+        cell.textLabel?.text = currentPost.titolo
+        cell.detailTextLabel?.text = currentPost.link
+        
+        return cell
+
+    }
+    
+    @IBOutlet var tableView: UITableView!
+    let parserController = XMLParserController.init(url: URL.init(string: "https://applenewsroom.home.blog/feed/")!)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+tableView.dataSource = self
+tableView.delegate = self
+        let risultato = self.parserController.parser.parse()
+        
+        if risultato == true {
+            self.tableView.reloadData()
+        }
 
+    }
 
 }
 
